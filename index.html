@@ -169,26 +169,21 @@
                 <div class="large-12 columns">
                     <h2 class="table-title">Student Debt Database</h2>
                     <p class="body-text">
-                        <p>Chatter and chatter and chatter and chatter and chatter and chatter and chatter and chatter and chatter and chatter and chatter and chatter and chatter and chatter and chatter and chatter and chatter and chatter and chatter and chatter and chatter and chatter and chatter and chatter and chatter and chatter and chatter and chatter and chatter and chatter and chatter.</p>
+                        <p>In May, the U.S. Department of Education released data in an attempt to ascertain average loan debt for various majors and degrees at schools across the country. Search Colorado schools by using the "Choose school" dropdown filter; use the keyword search box to find other schools.</p>
                         <p class="instructions-text">Use dropdown menus or keyword search to filter table &bull; click column headers to sort</p>
                 </div>
             </div>
             <div id="filters">
                 <div class="row">
                     <div class="large-2 medium-2 small-6 columns">
-                        <p id="filter-1"><span class="filter-description">Choose district<br>or county</span></p>
+                        <p id="filter-1"><span class="filter-description">Choose school</span></p>
                     </div>
                     <div class="large-2 medium-2 small-6 columns">
-                        <p id="filter-2"><span class="filter-description">Choose<br>school category</span></p>
-                    </div>
-                    <div class="large-2 medium-2 small-6 columns">
-                        <p id="filter-3"><span class="filter-description">Choose<br>school type</span></p>
-                    </div>
-                    <div class="large-2 medium-2 small-6 columns">
-                        <p id="filter-4"><span class="filter-description">Choose<br>vaccine type</span></p>
+                        <p id="filter-2"><span class="filter-description">Choose school type</span></p>
                     </div>
                     <div class="large-2 medium-2 small-6 columns end">
-                        <p id="filter-5"><span class="filter-description">Choose<br>survey status</span></p>
+                        <p id="filter-3"><span class="filter-description">Choose credential</span></p>
+                    </div>
                     </div>
                 </div>
                 <!-- <div class="row">
@@ -199,8 +194,8 @@
         </div> -->
             </div>
             <div class="reveal" id="info-modal" data-reveal>
-                <h3 class="modal-title">About ...</h3>
-                <p>Modal info ....</p>
+                <h3 class="modal-title">About the loan debt data</h3>
+                <p>From the U.S. Department of Education's documentation: <em>Given these data are preliminary, the U.S. Department of Education does not recommend using these data for informing enrollment decisions. College Scorecard will provide a final version appropriate for a wider audience in the fall of 2019 after institutions have had a chance to revise the underlying data from which these metrics are derived.</em></p>
                 <button class="close-button" data-close aria-label="Close modal" type="button">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -212,13 +207,13 @@
                             <tr>
                                 <th></th>
                                 <th class="none">ID</th>
-                                <th data-priority="1">Name</th>
-                                <th>Type</th>
-                                <th>Cipdesc</th>
-                                <th>Creddesc</th>
-                                <th>Count</th>
-                                <th>Debtmedian</th>
-                                <th>Ipedscount</th>
+                                <th data-priority="1">School name</th>
+                                <th>School type</th>
+                                <th>Degree description</th>
+                                <th>Credential type</th>
+                                <th>Student count</th>
+                                <th>Median debt</th>
+                                <th>Number awarded</th>
                             </tr>
                         </thead>
                     </table>
@@ -238,8 +233,8 @@
                 }
             }
 
-            var schoolName = [{ value: 'Adams State University', label: 'Adams State University' }, { value: 'Aims Community College', label: 'Aims Community College' }, { value: 'American Sentinel University', label: 'American Sentinel University' }, { value: 'Arapahoe Community College', label: 'Arapahoe Community College' }, { value: 'Bel - Rea Institute of Animal Technology', label: 'Bel-Rea Institute of Animal Technology' }, { value: 'CollegeAmerica Denver', label: 'CollegeAmerica Denver' }, { value: 'Colorado Academy of Veterinary Technology', label: 'Colorado Academy of Veterinary Technology' }, { value: 'Colorado Christian University', label: 'Colorado Christian University' }, { value: 'Colorado College', label: 'Colorado College' }, { value: 'Colorado Mesa University', label: 'Colorado Mesa University' }, { value: 'Colorado Mountain College', label: 'Colorado Mountain College' }, { value: 'Colorado Northwestern Community College', label: 'Colorado Northwestern Community College' }, { value: 'Colorado School of Healing Arts', label: 'Colorado School of Healing Arts' }, { value: 'Colorado School of Mines', label: 'Colorado School of Mines' }, { value: 'Colorado State University', label: 'Colorado State University' }, { value: 'Colorado State University-Pueblo', label: 'Colorado State University - Pueblo' }, { value: 'Colorado Technical University Colorado Springs', label: 'Colorado Technical University Colorado Springs' }, { value: 'Colorado Technical University Greenwood Village', label: 'Colorado Technical University Greenwood Village' }, { value: 'Colorado Technical University Online', label: 'Colorado Technical University Online' }, { value: 'Community College of Aurora', label: 'Community College of Aurora' }, { value: 'Community College of Denver', label: 'Community College of Denver' }, { value: 'Denver School of Nursing', label: 'Denver School of Nursing' }, { value: 'DeVry University Colorado', label: 'DeVry University Colorado' }, { value: 'Ecotech Institute', label: 'Ecotech Institute' }, { value: 'Fort Lewis College', label: 'Fort Lewis College' }, { value: 'Front Range Community College', label: 'Front Range Community College' }, { value: 'Institute of Business and Medical Careers', label: 'Institute of Business and Medical Careers' }, { value: 'Johnson & Wales University Denver', label: 'Johnson & Wales University Denver' }, { value: 'Jones International University', label: 'Jones International University' }, { value: 'Lamar Community College', label: 'Lamar Community College' }, { value: 'Metropolitan State College of Denver', label: 'Metropolitan State College of Denver' }, { value: 'Morgan Community College', label: 'Morgan Community College' }, { value: 'Naropa University', label: 'Naropa University' }, { value: 'National American University Centennial', label: 'National American University Centennial' }, { value: 'National American University Colorado Springs', label: 'National American University Colorado Springs' }, { value: 'National American University Colorado Springs South', label: 'National American University Colorado Springs South' }, { value: 'National American University Denver', label: 'National American University Denver' }, { value: 'Nazarene Bible College', label: 'Nazarene Bible College' }, { value: 'Northeastern Junior College', label: 'Northeastern Junior College' }, { value: 'Otero Junior College', label: 'Otero Junior College' }, { value: 'Pikes Peak Community College', label: 'Pikes Peak Community College' }, { value: 'Platt College Aurora', label: 'Platt College Aurora' }, { value: 'Prince Institute Rocky Mountains', label: 'Prince Institute Rocky Mountains' }, { value: 'Pueblo Community College', label: 'Pueblo Community College' }, { value: 'Red Rocks Community College', label: 'Red Rocks Community College' }, { value: 'Redstone College', label: 'Redstone College' }, { value: 'Regis University', label: 'Regis University' }, { value: 'Remington College Colorado Springs Campus', label: 'Remington College Colorado Springs Campus' }, { value: 'Rocky Mountain College of Art and Design', label: 'Rocky Mountain College of Art and Design' }, { value: 'Trinidad State Junior College', label: 'Trinidad State Junior College' }, { value: 'United States Air Force Academy', label: 'United States Air Force Academy' }, { value: 'University of Colorado Boulder', label: 'University of Colorado Boulder' }, { value: 'University of Colorado Denver', label: 'University of Colorado Denver' }, { value: 'University of Colorado Colorado Springs', label: 'University of Colorado Colorado Springs' }, { value: 'University of Denver', label: 'University of Denver' }, { value: 'University of Northern Colorado', label: 'University of Northern Colorado' }, { value: 'University of Phoenix Colorado Campus', label: 'University of Phoenix Colorado Campus' }, { value: 'University of Phoenix Southern Colorado Campus', label: 'University of Phoenix Southern Colorado Campus' }, { value: 'Western State Colorado University', label: 'Western State Colorado University' }];
-            var schoolType = [{ value: 'Public', label: 'Public' }, { value: 'Private', label: 'Private' }, { value: 'Proprietary', label: 'Proprietary' }, { value: 'Foreign Schools', label: 'Foreign Schools'} ];
+            var schoolName = [{ value: 'Adams State University', label: 'Adams State University' }, { value: 'Aims Community College', label: 'Aims Community College' }, { value: 'American Sentinel University', label: 'American Sentinel University' }, { value: 'Arapahoe Community College', label: 'Arapahoe Community College' }, { value: 'Aveda Institute Denver', label: 'Aveda Institute Denver' }, { value: 'Bel - Rea Institute of Animal Technology', label: 'Bel-Rea Institute of Animal Technology' }, { value: 'CollegeAmerica Denver', label: 'CollegeAmerica Denver' }, { value: 'Colorado Academy of Veterinary Technology', label: 'Colorado Academy of Veterinary Technology' }, { value: 'Colorado Christian University', label: 'Colorado Christian University' }, { value: 'Colorado College', label: 'Colorado College' }, { value: 'Colorado Mesa University', label: 'Colorado Mesa University' }, { value: 'Colorado Mountain College', label: 'Colorado Mountain College' }, { value: 'Colorado Northwestern Community College', label: 'Colorado Northwestern Community College' }, { value: 'Colorado School of Healing Arts', label: 'Colorado School of Healing Arts' }, { value: 'Colorado School of Mines', label: 'Colorado School of Mines' }, { value: 'Colorado State University', label: 'Colorado State University' }, { value: 'Colorado State University-Pueblo', label: 'Colorado State University - Pueblo' }, { value: 'Colorado Technical University', label: 'Colorado Technical University' }, { value: 'Community College of Aurora', label: 'Community College of Aurora' }, { value: 'Community College of Denver', label: 'Community College of Denver' }, { value: 'Denver College of Nursing', label: 'Denver College of Nursing' }, { value: 'Denver Seminary', label: 'Denver Seminary' }, { value: 'DeVry University', label: 'DeVry University' }, { value: 'Fort Lewis College', label: 'Fort Lewis College' }, { value: 'Front Range Community College', label: 'Front Range Community College' }, { value: 'Institute of Medical and Business Careers', label: 'Institute of Medical and Business Careers' }, { value: 'Johnson & Wales University', label: 'Johnson & Wales University' }, { value: 'Jones International University', label: 'Jones International University' }, { value: 'Lamar Community College', label: 'Lamar Community College' }, { value: 'Metropolitan State University of Denver', label: 'Metropolitan State University of Denver' }, { value: 'Morgan Community College', label: 'Morgan Community College' }, { value: 'Naropa University', label: 'Naropa University' }, { value: 'National American University', label: 'National American University' }, { value: 'Nazarene Bible College', label: 'Nazarene Bible College' }, { value: 'Northeastern Junior College', label: 'Northeastern Junior College' }, { value: 'Otero Junior College', label: 'Otero Junior College' }, { value: 'Paul Mitchell The School Denver', label: 'Paul Mitchell The School Denver' }, { value: 'Pikes Peak Community College', label: 'Pikes Peak Community College' }, { value: 'Platt College', label: 'Platt College' }, { value: 'Pueblo Community College', label: 'Pueblo Community College' }, { value: 'Red Rocks Community College', label: 'Red Rocks Community College' }, { value: 'Regis University', label: 'Regis University' }, { value: 'Rocky Mountain College of Art + Design', label: 'Rocky Mountain College of Art + Design' }, { value: 'Trinidad State Junior College', label: 'Trinidad State Junior College' }, { value: 'University of Colorado Boulder', label: 'University of Colorado Boulder' }, { value: 'University of Colorado Denver', label: 'University of Colorado Denver' }, { value: 'University of Colorado Colorado Springs', label: 'University of Colorado Colorado Springs' }, { value: 'University of Denver', label: 'University of Denver' }, { value: 'University of Northern Colorado', label: 'University of Northern Colorado' }, { value: 'University of Phoenix Colorado Campus', label: 'University of Phoenix Colorado Campus' }, { value: 'University of Phoenix Southern Colorado Campus', label: 'University of Phoenix Southern Colorado Campus' }, { value: 'Western State Colorado University', label: 'Western State Colorado University' }, { value: 'Westwood College - Denver North', label: 'Westwood College - Denver North' }];
+            var schoolType = [{ value: 'Public', label: 'Public' }, { value: 'Private', label: 'Private' }, { value: 'Proprietary', label: 'Proprietary' }, { value: 'Foreign Schools', label: 'Foreign Schools' }];
             var degreeType = [{ value: 'Undergraduate Certificate or Diploma', label: 'Undergraduate Certificate or Diploma' }, { value: 'Associate\'s Degree', label: 'Associate\'s Degree' }, { value: 'Bachelor\'s Degree', label: 'Bachelor\'s Degree' }, { value: 'Post-baccalaureate Certificate', label: 'Post-baccalaureate Certificate' }, { value: 'Master\'s Degree', label: 'Master\'s Degree' }, { value: 'Doctoral Degree', label: 'Doctoral Degree' }, { value: 'First Professional Degree', label: 'First Professional Degree' }, { value: 'Graduate/Professional Certificate', label: 'Graduate/Professional Certificate' }];
 
             var debtTable = $('#student-debt-table').DataTable({
@@ -336,7 +331,6 @@
                             column_number: 2,
                             filter_container_id: 'filter-1',
                             filter_default_label: 'Show all',
-                            //filter_match_mode: 'regex',
                             data: schoolName
                         },
                         {
