@@ -79,6 +79,13 @@ $sql_details = array(
     'db'   => 'student_debt_master',
     'host' => 'localhost'
 );
+
+// $sql_details = array(
+//     'user' => 'datatables',
+//     'pass' => '',
+//     'db'   => '',
+//     'host' => 'localhost'
+// );
  
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  * If you just want to use the basic configuration for DataTables with PHP
